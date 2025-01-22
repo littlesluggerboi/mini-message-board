@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('head.ejs')%>
+  <body>
+    <form action="/new" method="POST">
+      <label for="user" >User</label>
+      <input type="text" required name="user" id="user" />
+      <label for="text">Text</label>
+      <textarea name="text" id="text" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </body>
+</html>

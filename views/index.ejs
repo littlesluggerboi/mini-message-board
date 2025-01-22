@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('head.ejs')%>
+  <body>
+    <%messages.map((val, index)=>{%>
+    <h3><%=val.user%></h3>
+    <p><%=val.text%></p>
+    <a href=<%="/messages/".concat(index) %>>
+      <button>details</button>
+    </a>
+    <%})%>
+    <hr>
+    <a href="/new">
+        <button>Write a message</button>
+    </a>
+  </body>
+</html>
