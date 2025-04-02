@@ -1,20 +1,10 @@
 import { Router } from "express";
-import messages from "../model/messages.js";
+import rootController from "../controller/rootController.js";
 
 const newMessagesRouter = Router();
 
-newMessagesRouter.get("/", (req, res) =>{
-    res.render('form.ejs')
-})
+newMessagesRouter.get("/", rootController.getNewMessage)
 
-newMessagesRouter.post("/", (req, res) =>{
-    console.log(req.body);
-    const newMessage = {
-        ...req.body,
-        added: new Date()
-    }
-    messages.push(newMessage);
-    res.redirect("/")
-})
+newMessagesRouter.post("/", rootController.postNewMessage)
 
 export default newMessagesRouter;

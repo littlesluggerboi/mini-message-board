@@ -2,10 +2,10 @@
 <html lang="en">
   <%- include('head.ejs')%>
   <body>
-    <%messages.map((val, index)=>{%>
-    <h3><%=val.user%></h3>
+    <%messages.map((val)=>{%>
+    <h3><%=val.username%></h3>
     <p><%=val.text%></p>
-    <a href=<%="/messages/".concat(index) %>>
+    <a href=<%="/messages/".concat(val.id) %>>
       <button>details</button>
     </a>
     <%})%>

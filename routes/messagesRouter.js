@@ -1,16 +1,8 @@
 import { Router } from "express";
-import messages from "../model/messages.js";
+import rootController from "../controller/rootController.js";
 
 const messagesRouter = Router();
 
-messagesRouter.get("/:id", (req, res, next) => {
-  if (req.params.id && parseInt(req.params.id) < messages.length) {
-    const id = parseInt(req.params.id);
-    const message = messages[id];
-    res.render("message_detail.ejs", { message: message });
-  } else {
-    res.status(404).send("Message Not Found");
-  }
-});
+messagesRouter.get("/:id", rootController.getMessageById);
 
 export default messagesRouter;
