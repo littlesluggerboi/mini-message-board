@@ -1,17 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('head.ejs')%>
-  <body>
-    <%messages.map((val)=>{%>
-    <h3><%=val.username%></h3>
-    <p><%=val.text%></p>
-    <a href=<%="/messages/".concat(val.id) %>>
-      <button>details</button>
-    </a>
-    <%})%>
-    <hr>
-    <a href="/new">
-        <button>Write a message</button>
-    </a>
-  </body>
+<%- include('head.ejs')%>
+  <%- include('header.ejs')%>
+
+    <head>
+      <link rel="stylesheet" href="/css/index.css">
+      <link rel="stylesheet" href="/css/header.css">
+    </head>
+
+    <body>
+      <section class="messages_container">
+        <p>Message Board</p>
+        <div class="messages">
+          <%messages.map((val)=>{%>
+            <div class="message">
+              <span>
+                <%=val.username%>
+              </span>
+              <p>
+                <%=val.text%>
+              </p>
+              <a href=<%="/messages/" .concat(val.id) %>>
+                ...
+              </a>
+            </div>
+            <%})%>
+        </div>
+        <div class="new_message">
+          <a href="/new">
+            Write a message
+          </a>
+        </div>
+      </section>
+    </body>
+
 </html>

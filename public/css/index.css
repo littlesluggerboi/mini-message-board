@@ -1,0 +1,75 @@
+.messages_container{
+    max-width: 1200px;
+    margin: auto;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 0 0.25rem 0 gainsboro;
+    overflow: hidden;
+}
+
+.messages{
+    height: 50vh;
+    overflow: hidden;
+    overflow-y: auto;
+    padding: 0 1rem;
+}
+
+.messages_container > p{
+    padding: 0.5rem;
+    box-shadow: 0 0 0.25rem 0 gainsboro;
+    text-transform: uppercase;
+    text-indent: 0.5rem;
+}
+
+.messages{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-bottom: 1rem;
+}
+
+.message > span{
+    display: block;
+    font-size: 0.8rem;
+    margin: 1rem 0.5rem 0.5rem 1rem;
+}
+
+.message > p{
+    max-width: fit-content;
+    padding: 0.5rem 1rem;
+    background-color: blue;
+    background-image: linear-gradient(blue, purple);
+    color: white;
+    border-radius: 1rem;
+    display: inline-block;
+}
+
+.message > a{
+    display: inline;
+}
+
+.new_message{
+    box-shadow: 0 0 0.25rem 0 gainsboro;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+
+.new_message a{
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    background-color: gray;
+    color: white;
+    border: none;
+    text-decoration: none;
+}
+
+.new_message a:hover{
+    opacity: 0.5;
+}
+
+.new_message a:focus, .new_message:active{
+    outline-offset: 2px;
+    outline: 2px solid black;
+}
