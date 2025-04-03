@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <%-include('head.ejs')%>
-<body>
-    <h3>
-        <%=message.username%>
-    </h3>
-    <p>
-        <%=message.text%>
-    </p>
-    <hr>
-    <p>Timestamp: <%=message.added%></p>
-</body>
+    <%-include('header.ejs')%>
+        <link rel="stylesheet" href="/css/details.css">
+
+        <body>
+            <section class="details">
+                <h3>
+                    <%=message.username%>
+                </h3>
+                <p>
+                    <%=message.text%>
+                </p>
+                <hr>
+                <p>Timestamp: <%=message.added%></p>
+                <a href="/">&#8592;Board</a>
+            </section>
+        </body>
+
 </html>

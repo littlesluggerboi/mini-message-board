@@ -1,0 +1,42 @@
+.new_message{
+    max-width: 1200px;
+    margin: auto;
+}
+
+#new_message{
+    background-color: white;
+    display: grid;
+    margin: 1rem auto;
+    padding: 1.5rem;
+    box-shadow: 0 0 3px 0 gray;
+    border-radius: 0.5rem;
+}
+
+#new_message input, #new_message textarea{
+    padding: 0.25rem 0.5rem;
+    appearance: none;
+    border: 1px solid gray;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+#new_message textarea{
+    resize: none;
+}
+
+#new_message button{
+    gap: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    color: white;
+    border: none;
+    background-color: blue;
+}
+
+#new_message legend{
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+

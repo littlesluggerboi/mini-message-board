@@ -26,6 +26,8 @@ function Controller() {
     const message = await prisma.messages.findUnique({
       where: { id: parseInt(id) },
     });
+    const date = new Date(message.added);
+    message.added = date.toUTCString();
     res.render("message_detail", {
       title: `MMB | Message Details`,
       message,

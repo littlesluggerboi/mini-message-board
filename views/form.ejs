@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
   <%- include('head.ejs')%>
+  <%- include('header.ejs')%>
+  <head>
+    <link rel="stylesheet" href="/css/new_message_form.css">
+  </head>
   <body>
-    <form action="/new" method="POST">
-      <label for="user" >User</label>
-      <input type="text" required name="user" id="user" />
-      <label for="text">Text</label>
-      <textarea name="text" id="text" required></textarea>
-      <button type="submit">Send</button>
-    </form>
+    <section class="new_message">
+      <form id="new_message" action="/new" method="POST">
+        <legend>
+          New Message</legend>
+          <label for="user" >Name</label>
+          <input type="text" required name="user" id="user" />
+          <label for="text">Message</label>
+          <textarea name="text" id="text" rows="3" required></textarea>
+          <button type="submit">Send</button>
+        </form>
+        <a href="/">&#8592;Board</a>
+    </section>
   </body>
 </html>
